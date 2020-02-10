@@ -18,23 +18,29 @@ class MainViewController: UIViewController {
     @IBAction func searchTextFieldTapped(_ sender: UITextField) {
     }
     
+    var recipesTableViewController: RecipesTableViewController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-
-        // Do any additional setup after loading the view.
+        networkClient.fetchRecipes { (recipe, error) in
+            if let error = error {
+                NSLog("Error loading recipes: \(error)")
+                return
+            }
+        }
     }
-    
 
-    /*
+
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        
     }
-    */
+    
 
 }
