@@ -102,16 +102,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="586"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QUC-12-nlH">
-                                <rect key="frame" x="140" y="20" width="94" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QUC-12-nlH">
+                                <rect key="frame" x="20" y="8" width="335" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RsS-TG-cxq">
-                                <rect key="frame" x="16" y="76" width="343" height="490"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RsS-TG-cxq">
+                                <rect key="frame" x="20" y="64" width="335" height="514"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -120,6 +118,16 @@
                             </textView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="0Uy-FC-n99" firstAttribute="trailing" secondItem="QUC-12-nlH" secondAttribute="trailing" constant="20" id="HXU-ba-drU"/>
+                            <constraint firstItem="RsS-TG-cxq" firstAttribute="top" secondItem="QUC-12-nlH" secondAttribute="bottom" constant="8" id="HlL-wV-LTq"/>
+                            <constraint firstItem="0Uy-FC-n99" firstAttribute="bottom" secondItem="RsS-TG-cxq" secondAttribute="bottom" constant="8" id="LEL-9V-7HF"/>
+                            <constraint firstItem="QUC-12-nlH" firstAttribute="leading" secondItem="0Uy-FC-n99" secondAttribute="leading" constant="20" id="Tdq-eb-FIE"/>
+                            <constraint firstItem="RsS-TG-cxq" firstAttribute="leading" secondItem="0Uy-FC-n99" secondAttribute="leading" constant="20" id="Wuy-2t-tsR"/>
+                            <constraint firstItem="QUC-12-nlH" firstAttribute="top" secondItem="0Uy-FC-n99" secondAttribute="top" constant="8" id="XZ4-6U-2cR"/>
+                            <constraint firstItem="0Uy-FC-n99" firstAttribute="trailing" secondItem="RsS-TG-cxq" secondAttribute="trailing" constant="20" id="dzI-Ub-Jsq"/>
+                            <constraint firstItem="RsS-TG-cxq" firstAttribute="top" secondItem="QUC-12-nlH" secondAttribute="bottom" constant="8" id="sbU-qL-cj8"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="0Uy-FC-n99"/>
                     </view>
                     <navigationItem key="navigationItem" id="vLZ-rj-gJl"/>
