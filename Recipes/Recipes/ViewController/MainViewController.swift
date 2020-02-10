@@ -8,6 +8,10 @@
 
 import UIKit
 
+let networkClient = RecipesNetworkClient()
+
+var allRecipes: [Recipe] = []
+
 class MainViewController: UIViewController {
     @IBOutlet weak var searchTextField: UITextField!
     
@@ -16,6 +20,8 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
 
         // Do any additional setup after loading the view.
     }
