@@ -10,12 +10,24 @@ import UIKit
 
 let networkClient = RecipesNetworkClient()
 
-var allRecipes: [Recipe] = []
-
 class MainViewController: UIViewController {
-    @IBOutlet weak var searchTextField: UITextField!
     
+    var filteredRecipes: [Recipe] = [] {
+        didSet {
+            filteredRecipes1()
+        }
+    }
+    
+    var allRecipes: [Recipe] = [] {
+        didSet {
+            filteredRecipes1()
+        }
+    }
+    
+    @IBOutlet weak var searchTextField: UITextField!
     @IBAction func searchTextFieldTapped(_ sender: UITextField) {
+        resignFirstResponder()
+        filteredRecipes1()
     }
     
     var recipesTableViewController: RecipesTableViewController?
@@ -31,7 +43,16 @@ class MainViewController: UIViewController {
         }
     }
 
-
+    func filteredRecipes1() {
+        DispatchQueue.main.async {
+            guard let search = self.searchTextField.text else {return}
+            if search == "" {
+                self.filteredRecipes = self.allRecipes
+            } else {
+                self.filteredRecipes = self.allRecipes.filter{ $0.name.contains(search) || $0.instructions.contains(search) }
+            }
+        }
+    }
     
     // MARK: - Navigation
 
